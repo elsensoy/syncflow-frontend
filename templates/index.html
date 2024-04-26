@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Language Interpreter</title>
+    <style>
+        #live-indicator {
+            padding: 5px;
+            color: white;
+            background-color: grey;
+            border-radius: 5px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        .recording-on {
+            background-color: red;
+        }
+        .recording-off {
+            background-color: grey;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sign Language Interpreter</h1>
+    <div id="live-indicator" class="recording-off">Not Recording</div>
+    <img src="{{ url_for('video_feed') }}" alt="Video Feed">
+    <div id="transcript">Transcription will appear here...</div>
+    <button onclick="toggleRecording()">Start/Stop Recording</button>
+    <script>
+        function toggleRecording() {
+            var indicator = document.getElementById('live-indicator');
+            var isRecording = indicator.classList.contains('recording-on');
+
+            if (isRecording) {
+                indicator.classList.remove('recording-on');
+                indicator.classList.add('recording-off');
+                indicator.innerHTML = 'Not Recording';
+                document.getElementById('transcript').innerHTML = 'Recording stopped.';
+                // Additional code to stop recording or speech recognition
+            } else {
+                indicator.classList.remove('recording-off');
+                indicator.classList.add('recording-on');
+                indicator.innerHTML = 'Recording Now';
+                document.getElementById('transcript').innerHTML = 'Recording now...';
+                // Additional code to start recording or speech recognition
+            }
+        }
+    </script>
+</body>
+</html>
