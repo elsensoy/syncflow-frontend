@@ -1,4 +1,5 @@
 annotated-types==0.6.0
+bidict==0.23.1
 blinker==1.7.0
 cachetools==5.3.3
 certifi==2024.2.2
@@ -7,6 +8,7 @@ charset-normalizer==3.3.2
 click==8.1.7
 docstring_parser==0.16
 Flask==3.0.3
+Flask-SocketIO==5.3.6
 google-ai-generativelanguage==0.6.2
 google-api-core==2.18.0
 google-api-python-client==2.126.0
@@ -25,6 +27,7 @@ googleapis-common-protos==1.63.0
 grpc-google-iam-v1==0.13.0
 grpcio==1.62.2
 grpcio-status==1.62.2
+h11==0.14.0
 httplib2==0.22.0
 idna==3.7
 itsdangerous==2.1.2
@@ -44,9 +47,12 @@ pydantic_core==2.18.1
 pyparsing==3.1.2
 python-dateutil==2.9.0.post0
 python-dotenv==1.0.1
+python-engineio==4.9.0
+python-socketio==5.11.2
 requests==2.31.0
 rsa==4.9
 shapely==2.0.4
+simple-websocket==1.0.0
 six==1.16.0
 sounddevice==0.4.6
 soundfile==0.12.1
@@ -55,3 +61,4 @@ typing_extensions==4.11.0
 uritemplate==4.1.1
 urllib3==2.2.1
 Werkzeug==3.0.2
+wsproto==1.2.0

@@ -1,3 +1,4 @@
+#app.py (main file)
 from flask import Flask, render_template, Response
 from dotenv import load_dotenv  # Import the load_dotenv function from python-dotenv
 import os  # Import the os module to access environment variables
