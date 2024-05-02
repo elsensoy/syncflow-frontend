@@ -1,4 +1,8 @@
 #video_processing.py
+import numpy
+print(numpy.__version__)
+print(numpy.__file__)
+
 import cv2
 from .model import gesture_model
 

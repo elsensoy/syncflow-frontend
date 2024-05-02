@@ -8,6 +8,7 @@ import json
 from google.cloud import speech
 from .video_processing import generate_frames  # Assuming you have your video processing logic
 # ... other imports ...
+from .routes.views import register_routes
 from .speech_recognition import create_speech_client, recognize_speech
 
 load_dotenv()
@@ -17,7 +18,7 @@ api_key = os.getenv('GEMINI_API_KEY')
 if not api_key:
     raise RuntimeError("GEMINI_API_KEY not set in .env file")
 
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "/wsl.localhost/Ubuntu/home/elidasensoy/my-flask-app/secrets/nemo-init-ca43e0ad082e.json"
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "/wsl.localhost/Ubuntu/home/elidasensoy/my_flask_app/secrets/nemo-init-ca43e0ad082e.json"
 
 
 # Google Cloud Speech client initialization

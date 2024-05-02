@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify
 from werkzeug.utils import secure_filename
-from .video_processing import process_video
+from ..services.video_processing import process_video  # Corrected import path
 from .utils.api_utils import generate_content_from_frames
 from .utils.error_handling import InvalidUsage
 
